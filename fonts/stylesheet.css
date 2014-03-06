@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'nettoiconsotregular';
+    src: url('nettoiconsot-webfont.eot');
+    src: url('nettoiconsot-webfont.eot?#iefix') format('embedded-opentype'),
+         url('nettoiconsot-webfont.woff') format('woff'),
+         url('nettoiconsot-webfont.ttf') format('truetype'),
+         url('nettoiconsot-webfont.svg#nettoiconsotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'nettootregular';
+    src: url('nettoot-webfont.eot');
+    src: url('nettoot-webfont.eot?#iefix') format('embedded-opentype'),
+         url('nettoot-webfont.woff') format('woff'),
+         url('nettoot-webfont.ttf') format('truetype'),
+         url('nettoot-webfont.svg#nettootregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'netto_otlight';
+    src: url('nettoot-light-webfont.eot');
+    src: url('nettoot-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('nettoot-light-webfont.woff') format('woff'),
+         url('nettoot-light-webfont.ttf') format('truetype'),
+         url('nettoot-light-webfont.svg#netto_otlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'netto_icons_otlight';
+    src: url('nettoiconsot-light-webfont.eot');
+    src: url('nettoiconsot-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('nettoiconsot-light-webfont.woff') format('woff'),
+         url('nettoiconsot-light-webfont.ttf') format('truetype'),
+         url('nettoiconsot-light-webfont.svg#netto_icons_otlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
