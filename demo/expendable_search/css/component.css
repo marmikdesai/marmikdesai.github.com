@@ -1,0 +1,86 @@
+*, *:after, *:before { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+body {
+	background: #2c3e50;
+	margin:0px;
+	padding:0px;
+}
+.sewr {
+	position: relative;
+	margin-top: 10px;
+	width: 0%;
+	min-width: 60px;
+	height: 60px;
+	float: right;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+#serin::-webkit-input-placeholder {
+	color: #efb480;
+}
+#serin:-moz-placeholder {
+	color: #efb480;
+}
+#serin::-moz-placeholder {
+	color: #efb480;
+}
+#serin:-ms-input-placeholder {
+	color: #efb480;
+}
+.icon, .submit  {
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+.submit {
+	background: #fff;
+    opacity: 0;
+	color: transparent;
+	border: none;
+	outline: none;
+	z-index: -1;
+}
+.icon {
+	background: #e67e22;
+	z-index: 90;
+}
+.icon:before {
+	content: "";
+	background:url(../css/search_icon.png) center no-repeat;
+	width:40px;
+	height:40px;
+	background-size:cover;
+	position:absolute;
+	right: 10px;
+	top: 8px;
+}
+.open{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	outline: none;
+	background: #fff;
+	width: 100%;
+	height: 60px;
+	margin: 0;
+	z-index: 10;
+	padding: 20px 65px 20px 20px;
+	font-family: inherit;
+	font-size: 20px;
+	color: #2c3e50;
+}

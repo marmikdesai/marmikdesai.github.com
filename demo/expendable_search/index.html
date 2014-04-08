@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Expanable Search | Marmik Desai</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="author" content="Marmik Desai">
+<link rel="author" href="https://www.facebook.com/marmik.desai"/>
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+</head>
+<body>
+	<div class="sewr">
+		<form action="#" method="get">
+			<input class="close" placeholder="Enter your search term..." type="text" name="search" id="serin">
+			<input class="submit" type="submit" value="">
+			<span class="icon"></span>
+		</form>
+	</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+/*!
+ * Expanable Search
+ * Original author: @Marmik Desai
+ * Further changes, comments: @Marmik Desai
+ * Licensed under the MIT license
+ */
+	$(function(){
+		$(".icon").click(function(){
+			if ($("#serin").hasClass("close")) {
+				$("#serin").removeClass("close").addClass("open");
+				$("#serin").animate({
+					opacity: 1,
+					width: "100%"
+				},500);
+				$(".sewr").css("width", "100%");
+			} else if ($("#serin").hasClass("open")) {
+				$("#serin").animate({
+					opacity: 0,
+					width: "0%"
+				},500, function(){
+					$("#serin").removeClass("open").addClass("close");
+				});
+				$(".sewr").css("width", "0%");
+			}
+		});
+	});
+</script>
+</body>
+</html>

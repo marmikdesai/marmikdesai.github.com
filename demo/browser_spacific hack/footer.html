@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sticky Footer & Browser CSS Hack | Marmik Desai</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="author" content="Marmik Desai">
+<link rel="author" href="https://www.facebook.com/marmik.desai"/>
+<style>
+	body{
+		padding:0px;
+		margin:0px;
+	}
+	html, body {
+		height: 100%;
+	}
+	header, .header{
+		float:left;
+		width:100%;
+		height:200px;
+		background:purple;
+	}
+	.mar_sc{
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0px auto -200px;
+		position: relative;
+	}
+	.wrap{
+		width:100%;
+		float:left;
+	}
+	.mar{
+		clear: both;
+		height: 200px;
+	}
+	footer, .footer{
+		width:100%;
+		height:200px;
+		background:green;
+		position:relative;
+	}
+	html[data-useragent*='MSIE 10.0'] .footer{
+		background:blue;
+	}
+	@-moz-document url-prefix() { 
+		.footer{
+			background:red;
+		}
+	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) { 
+		.footer{
+			background:brown;
+		}
+	}
+</style>
+<!--[if IE]>
+	<style type="text/css">
+		.footer{
+			background:yellow;
+		}
+	</style>
+<![endif]-->
+<script>
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+/*!
+ * Expanable Search
+ * Original author: @Marmik Desai
+ * Further changes, comments: @Marmik Desai
+ * Licensed under the MIT license
+ */
+</script>
+</head>
+<body>
+	<div class="mar_sc">
+		<header class="header">
+			
+		</header>
+		<section class="wrap">
+			<article>
+				<h2>
+					Browser specific hack
+				</h2>
+				<h2>
+					Sticky Footer
+				</h2>
+		</section>
+		<section class="mar">
+		
+		</section>
+	</div>
+	<footer class="footer">
+	
+	</footer>
+</body>
+</html>

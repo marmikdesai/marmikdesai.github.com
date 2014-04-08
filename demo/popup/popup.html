@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Simple JavaScript Popup | Marmik Desai</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="author" content="Marmik Desai">
+<link rel="author" href="https://www.facebook.com/marmik.desai"/>
+<style type="text/css">
+body{
+	margin:0px;
+	padding:0px;
+}
+p{
+	line-height:40px;
+	margin:0px;
+	padding:0px;
+}
+.cool {
+	display: none;
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 1;
+}
+.main {
+	display: none;
+	position: relative;
+	width: 60%;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 2;
+	overflow: auto;
+	padding:30px 2%;
+	margin:0px auto;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+/*!
+ * Expanable Search
+ * Original author: @Marmik Desai
+ * Further changes, comments: @Marmik Desai
+ * Licensed under the MIT license
+ */;
+$(document).ready(function(){
+	clas();
+	main();
+});
+function main(){
+	mamu = ($(window).height());
+	$(".cool").css({"height": mamu + "px"});
+	$(".cool").css({"position": "fixed"}); 
+	var hei = $(".main").height();
+	var mam = (mamu - hei) / 3;
+//	$(".main").css({"top": mam + "px"});
+	$(".main").css({"height": (mamu - 60) + "px"});
+}
+function clas(){
+	$("#fade").addClass("cool");
+	$("#light").addClass("main");
+}
+function popUp(){
+	$("body").addClass("overflow");
+	$(".overflow").css({"overflow": "hidden"});
+	$(".cool").css({"display": "block"});
+	$(".main").css({"display": "block"});
+}
+function popUpClose(){
+	$("body").removeClass("overflow");
+	$("body").css({"overflow": "auto"});
+	$(".cool").css({"display": "none"});
+	$(".main").css({"display": "none"});
+}
+</script>
+</head>
+<body>
+<div class="marmik">
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+	<p> Click here to display popup click <a href="javascript:void(0)" onclick="popUp()"> here</a> </p>
+</div>
+<div id="fade">
+	<div id="light">
+		<h3> 
+			USE IT, its free
+		</h3>
+		<p> 
+			Marmik Desai
+		</p>
+		<h3> 
+			Lorem Ipsum
+		</h3>
+		<p> 
+			Marmik Desai
+		</p>
+		<h3> 
+			Lorem Ipsum
+		</h3>
+		<p> 
+			Marmik Desai
+		</p>
+		<h3> 
+			Lorem Ipsum
+		</h3>
+		<p> 
+			Marmik Desai
+		</p>
+		<h3> 
+			Lorem Ipsum
+		</h3>
+		<p> 
+			Marmik Desai
+		</p>
+		<h3> 
+			Lorem Ipsum
+		</h3>
+		<p> 
+			Marmik Desai
+		</p>
+		<a href="javascript:void(0)" onclick="popUpClose()" class="close"> 
+			Close
+		</a> 
+	</div>
+</div>
+</body>
+</html>
