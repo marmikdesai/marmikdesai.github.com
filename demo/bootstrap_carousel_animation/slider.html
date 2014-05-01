@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Responsive Web Slider - Marmik Desai</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="marmik desai">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="slider" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner">
+		<div class="item active" id="image_1">
+			<img src="banner1.jpg" alt="" />
+			<div class="carousel-caption">
+				<h1 data-animate="rollIn">
+					Marmik Desai
+				</h1>
+				<p class="text-info" data-animate="bounceInUp">
+					These is responsive slider example
+					<span class="label label-important">
+						HTML5, CSS3
+					</span>
+				</p>
+				<a class="btn btn-large btn-primary" href="http://marmikdesai.github.io/" data-animate="bounceInLeft">
+					Marmik Desai
+				</a>
+			</div>
+		</div>
+		<div class="item in" id="image_2">
+			<img src="banner2.jpg" alt="" />
+			<div class="carousel-caption">
+				<h1 data-animate="lightSpeedIn">
+					Web Development
+				</h1>
+				<p class="lead" data-animate="fadeInDown">
+					PHP, CMS
+				</p>
+				<a class="btn btn-large btn-warning" href="http://marmikdesai.github.io/">
+					Learn more
+				</a>
+			</div>
+		</div>
+		<div class="item" id="image_3">
+			<img src="banner3.jpg" alt="" />
+			<div class="carousel-caption">
+				<h1 data-animate="wobble">
+					Web Design & Usability
+				</h1>
+				<p class="lead" data-animate="wobble">
+					User Experience, User Interface Design
+				</p>
+				<a class="btn btn-large btn-warning" href="http://marmikdesai.github.io/">
+					Learn more
+				</a>
+			</div>
+		</div>
+		<div class="item" id="image_4">
+			<img src="banner4.jpg" alt="" />
+			<div class="carousel-caption">
+				<h1 data-animate="swing">
+					Front End Developer
+				</h1>
+				<p class="lead" data-animate="wobble">
+					JavaScript, Jquery, Ajax
+				</p>
+				<a class="btn btn-large btn-warning" href="http://marmikdesai.github.io/">
+					Learn more
+				</a>
+			</div>
+		</div>
+		<div class="item" id="image_5">
+			<img src="banner5.jpg" alt="" />
+			<div class="carousel-caption">
+				<h1 data-animate="swing">
+					Say Hi...
+				</h1>
+				<a class="btn btn-large btn-warning" href="http://marmikdesai.github.io/">
+					Learn more
+				</a>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#slider" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#slider" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="responsive_slider.js"></script>
+<script>  
+	$(document).ready(function() { 
+		$('#slider').animat({
+		});
+	});
+</script>
+</body>
+</html>
