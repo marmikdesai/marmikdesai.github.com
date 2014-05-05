@@ -1,0 +1,67 @@
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+body, html, p, h1, h2, h3, section, article, div, figure{
+	margin:0px;
+	padding:0px;
+}
+a, a:hover{
+    text-decoration: none;
+}
+image {
+    border: none;
+}
+img{
+	vertical-align: middle;
+}
+ul, li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+input, textarea, button{
+	outline:none;
+}
+body{
+	overflow-x: hidden;
+}
+.mai{
+	width:100%;
+	float:left;
+}
+.mai1{
+	float:left;
+	width:100%;
+}
+.mai1 li{
+	width:auto;
+	float:left;
+	padding:0px 10px;
+	font-size:12px;
+	line-height:20px;
+	font-family: arial,sans-serif;
+}
+.mai1 li a{
+	display:block;
+	color:#000;
+}
+.sli{
+	float:left;
+	width:100%;
+}
+.sli1{
+	float:left;
+	width:24%;
+	background:rgb(82, 243, 191);
+	margin:0.5%;
+}
+.sli1 a{
+	text-align: center;
+	color: #fff;
+	display: block;
+	font-size:12px;
+	line-height:20px;
+	font-family: arial,sans-serif;
+}
