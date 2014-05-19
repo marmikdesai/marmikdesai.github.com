@@ -6,11 +6,19 @@
  */
 
 (function($) {
+<<<<<<< HEAD
 	$.fn.animat = function() {
         img();
         var ts = this;
         var att;
 		this.find(".carousel-caption").children().each(function() {
+=======
+    $.fn.animat = function() {
+        img();
+        var ts = this;
+        var att;
+        this.find(".carousel-caption").children().each(function() {
+>>>>>>> 43910bf0d0d800c4e0bc1e6d69f542c17730de82
             $(this).css("opacity", 0);
         });
         $(".carousel-caption", this.find(".active")).children().each(function() {
@@ -20,6 +28,7 @@
             }
             $(this).removeClass(att).addClass("animated" + " " + att);
         });
+<<<<<<< HEAD
 		this.on("slid.bs.carousel", function() {
 			$(".carousel-caption").children().each(function() {
 				if ($(this).data("animate")) {
@@ -38,6 +47,29 @@
 		});
         return this;
     };
+=======
+        this.on("slid.bs.carousel", function() {
+			 $(".carousel-caption").each(function() {
+				if ($(this).data("animate")) {
+                    att = $(this).data("animate");
+                }
+				$(this).children().removeClass(att);
+				$(this).children().css("opacity", 0);
+				$(this).children().removeClass("animated").addClass("notanimated");
+			});
+            $(this).css("opacity", 1);
+            $(".carousel-caption", ts.find(".active")).children().each(function() {
+                if ($(this).data("animate")) {
+                    att = $(this).data("animate");
+                }
+                $(this).css("opacity", 1).removeClass("notanimated").addClass("animated");
+                $(this).css("opacity", 1).addClass(att);
+            });
+        });
+        return this;
+    };
+
+>>>>>>> 43910bf0d0d800c4e0bc1e6d69f542c17730de82
     function img() {
         $(".item img").css({
             "visibility": "hidden",
@@ -50,12 +82,16 @@
             $("#image_" + (i + 1)).css({
                 "background-image": "url(" + imag + ")",
                 "height": 500,
+<<<<<<< HEAD
                 "background-attachment": "fixed",
+=======
+>>>>>>> 43910bf0d0d800c4e0bc1e6d69f542c17730de82
                 "background-size": "cover"
             });
         });
         i++;
     }
+<<<<<<< HEAD
 	sb()
 	function sb(){
 		if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
@@ -64,3 +100,6 @@
 		}
 	}
 })(jQuery);
+=======
+})(jQuery);
+>>>>>>> 43910bf0d0d800c4e0bc1e6d69f542c17730de82
