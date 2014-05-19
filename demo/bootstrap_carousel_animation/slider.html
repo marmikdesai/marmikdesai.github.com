@@ -7,6 +7,20 @@
 <meta name="author" content="marmik desai">
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet">
+<style>
+.carousel-inner .item{
+	-webkit-transition: all 2.8s cubic-bezier(0.075, 0.082, 0.165, 1);
+	-moz-transition:all 2.8s cubic-bezier(0.075, 0.082, 0.165, 1);
+	-o-transition:all 2.8s cubic-bezier(0.075, 0.082, 0.165, 1);
+	-ms-transition:all 2.8s cubic-bezier(0.075, 0.082, 0.165, 1);
+	transition:all 2.8s cubic-bezier(0.075, 0.082, 0.165, 1);
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+</style>
 </head>
 <body>
 <div id="slider" class="carousel slide" data-ride="carousel">
@@ -28,17 +42,17 @@
 				</a>
 			</div>
 		</div>
-		<div class="item in" id="image_2">
+		<div class="item" id="image_2">
 			<img src="banner2.jpg" alt="" />
 			<div class="carousel-caption">
-				<h1 data-animate="lightSpeedIn">
-					Web Development
+				<h1 data-animate="tada">
+					Marmik Desai
 				</h1>
-				<p class="lead" data-animate="fadeInDown">
-					PHP, CMS
+				<p data-animate="fadeInDownBig">
+					Mamu
 				</p>
-				<a class="btn btn-large btn-warning" href="http://marmikdesai.github.io/">
-					Learn more
+				<a href="#" data-animate="swing">
+					Front End Developer
 				</a>
 			</div>
 		</div>
