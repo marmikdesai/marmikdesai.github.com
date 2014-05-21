@@ -6,11 +6,11 @@
  */
 
 (function($) {
-	$.fn.animat = function() {
+    $.fn.animat = function() {
         img();
-        var ts = this;
+		var ts = this;
         var att;
-		this.find(".carousel-caption").children().each(function() {
+        this.find(".carousel-caption").children().each(function() {
             $(this).css("opacity", 0);
         });
         $(".carousel-caption", this.find(".active")).children().each(function() {
@@ -20,24 +20,24 @@
             }
             $(this).removeClass(att).addClass("animated" + " " + att);
         });
-		this.on("slid.bs.carousel", function() {
-			$(".carousel-caption").children().each(function() {
-				if ($(this).data("animate")) {
-					ass = $(this).data("animate");
-				}
-				console.log(ass);
-				$(this).removeClass(ass).addClass("removed").css("opacity", 0);
-			});
-			$(".carousel-caption", ts.find(".active")).children().each(function() {
-				if ($(this).data("animate")) {
-					att = $(this).data("animate");
-				}
-				$(this).css("opacity", 1).addClass("animated");
-				$(this).css("opacity", 1).removeClass("removed").addClass(att);
-			});
-		});
+        this.on("slid.bs.carousel", function() {
+            $(".carousel-caption").children().each(function() {
+                if ($(this).data("animate")) {
+                    ass = $(this).data("animate");
+                }
+                $(this).removeClass(ass).addClass("removed").css("opacity", 0);
+            });
+            $(".carousel-caption", ts.find(".active")).children().each(function() {
+                if ($(this).data("animate")) {
+                    att = $(this).data("animate");
+                }
+                $(this).css("opacity", 1).addClass("animated");
+                $(this).css("opacity", 1).removeClass("removed").addClass(att);
+            });
+        });
         return this;
     };
+
     function img() {
         $(".item img").css({
             "visibility": "hidden",
@@ -56,11 +56,16 @@
         });
         i++;
     }
-	sb()
-	function sb(){
-		if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
-			$(".carousel-inner .item").css({"-webkit-transition": "none"})
-			$(".carousel-inner .item").css({"transition": "none"});
-		}
-	}
+    sb()
+
+    function sb() {
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+            $(".carousel-inner .item").css({
+                "-webkit-transition": "none"
+            })
+            $(".carousel-inner .item").css({
+                "transition": "none"
+            });
+        }
+    }
 })(jQuery);
