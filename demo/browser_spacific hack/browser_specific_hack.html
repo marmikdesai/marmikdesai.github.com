@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <meta name="author" content="Marmik Desai">
-<link rel="author" href="https://www.facebook.com/marmik.desai"/>
+<link rel="author" href="http://marmikdesai.github.io/"/>
 <style>
 	body{
 		padding:0px;
@@ -42,37 +42,71 @@
 		background:green;
 		position:relative;
 	}
-	html[data-useragent*='MSIE 10.0'] .footer{
-		background:blue;
-	}
+	/* Firefox */
 	@-moz-document url-prefix() { 
 		.footer{
 			background:red;
 		}
 	}
+	/* Firefox */
+	/* Safari and Chrome */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { 
+		/* chrome */
 		.footer{
 			background:brown;
 		}
+		/* chrome */
+		/* Safari */
+		::i-block-chrome,.footer{
+			background:deeppink;
+		}
+		/* Safari */
+	}
+	/* Safari and Chrome */
+	/* ie10 and 11 */
+	@media all and (-ms-high-contrast:none){
+		/* IE10 */
+		.footer{ 
+			background:blue;
+		}
+		/* IE11 */
+		*::-ms-backdrop, .foter {
+			background:burlywood;
+		}
 	}
 </style>
-<!--[if IE]>
+<!-- for html5 tag -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<!-- for html5 tag -->
+<!-- IE9 -->
+<!--[if IE 9]>
 	<style type="text/css">
 		.footer{
 			background:yellow;
 		}
 	</style>
 <![endif]-->
-<script>
-	var doc = document.documentElement;
-	doc.setAttribute('data-useragent', navigator.userAgent);
-/*!
- * Expanable Search
- * Original author: @Marmik Desai
- * Further changes, comments: @Marmik Desai
- * Licensed under the MIT license
- */
-</script>
+<!-- IE9 -->
+<!-- IE8 -->
+<!--[if IE 8]>
+	<style type="text/css">
+		.footer{
+			background:cadetblue;
+		}
+	</style>
+<![endif]-->
+<!-- IE8 -->
+<!-- IE7 -->
+<!--[if IE 7]>
+	<style type="text/css">
+		.footer{
+			background:darkorange;
+		}
+	</style>
+<![endif]-->
+<!-- IE7 -->
 </head>
 <body>
 	<div class="mar_sc">
@@ -92,8 +126,8 @@
 		
 		</section>
 	</div>
-	<footer class="footer">
+	<div class="footer">
 	
-	</footer>
+	</div>
 </body>
 </html>
