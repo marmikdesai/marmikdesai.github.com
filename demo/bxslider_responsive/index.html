@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<title>bx slider</title>
+<link rel="stylesheet" href="jquery.bxslider.css" type="text/css" />
+<script src="jquery.min.js"></script>
+<script src="jquery.bxslider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var minNumber,
+		maxNumber,
+		width = $(window).width();
+	
+	if (width < 640) {
+		minNumber = 1;
+		maxNumber = 1;
+	} else if (width < 1024) {
+		minNumber = 3;
+		maxNumber = 3;
+	} else {
+		minNumber = 4;
+		maxNumber = 4;
+	}
+	slider = $('.bxslider').bxSlider({
+		minSlides: minNumber,
+		maxSlides: maxNumber,
+		slideWidth: 170,
+		slideMargin: 10
+	});
+});
+$(window).resize(function(){
+	slider.destroySlider();
+	var minNumber,
+		maxNumber,
+		width = $(window).width();
+	
+	if (width < 640) {
+		console.log("0 - 640");
+		minNumber = 1;
+		maxNumber = 1;
+	} else if (width < 1024) {
+		console.log("641 - 1024");
+		minNumber = 3;
+		maxNumber = 3;
+	} else {
+		console.log("more than 1024");
+		minNumber = 4;
+		maxNumber = 4;
+	}
+	slider = $('.bxslider').bxSlider({
+		minSlides: minNumber,
+		maxSlides: maxNumber,
+		slideWidth: 170,
+		slideMargin: 10
+	});
+});
+</script>
+</head>
+<body>
+<ul class="bxslider">
+	<li><img src="images/trees.jpg" /></li>
+	<li><img src="images/tree_root.jpg" /></li>
+	<li><img src="images/houses.jpg" /></li>
+	<li><img src="images/hill_road.jpg" /></li>
+	<li><img src="images/me_trees.jpg" /></li>
+	<li><img src="images/hill_trees.jpg" /></li>
+	<li><img src="images/mountain.jpg" /></li>
+	<li><img src="images/houses.jpg" /></li>
+</ul>
+</body>
+</html>
