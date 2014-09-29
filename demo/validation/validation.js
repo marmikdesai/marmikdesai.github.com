@@ -21,7 +21,8 @@ function validation(){
 		var typeCheckbox = $(this).parents("form").find("input[type='checkbox']");
 		var typeRadio =  $(this).parents("form").find("input[type='radio']");
 		var typeEmail =  $(this).parents("form").find("input[type='email']");
-		
+		var typeNumber =  $(this).parents("form").find("#phone, #phone1");
+				
 		var i = 0;
 		typeText.each(function(i) {
 			var errorMsg = $(this).data("error");
@@ -86,36 +87,62 @@ function validation(){
 		
 		var m = 0;
 		typeEmail.each(function(m) {
+			var emailValue = $(this).val();
 			var errorMsg = $(this).data("error");
 			var wrongMsg = $(this).data("wrong");
-			var emailValue = $(this).val();
 		
-			function checkEmail(emailValue) {
-				alert(36);
-				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				if (!regex.test(emailValue)) {
-					$(this).parent().find(".error").empty();
-					$(this).parent().append("<span class='error'>" + wrongMsg + "</span>");
-					$(this).parent().addClass("has-error");
-					event.preventDefault();
-					return false;
-				} else {
-					return true;
-				}
-			}
 			if ((emailValue == '')) {
-				alert(34);
 				$(this).parent().find(".error").empty();
 				$(this).parent().append("<span class='error'>" + errorMsg + "</span>");
 				$(this).parent().addClass("has-error");
 				event.preventDefault();
 			} else if (!(emailValue == '')) {
-				if ((checkEmail(emailValue))) {
-					$(this).parent().find(".error").empty();
-					$(this).parent().removeClass("has-error");
-				}
+				var n = 0
+				$(this).each(function(n) {
+					var regex1 = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+					if (!regex1.test(emailValue)) {
+						$(this).parent().find(".error").empty();
+						$(this).parent().append("<span class='error'>" + wrongMsg + "</span>");
+						$(this).parent().addClass("has-error");
+						event.preventDefault();
+						return false;
+					} else {
+						$(this).parent().find(".error").empty();
+						$(this).parent().removeClass("has-error");
+					}
+				});
 			}
 		});
-		
+
+		for (var p1 = 0; p1 < typeNumber.length; p1++) {
+			var p = 0;
+			typeNumber.each(function(p) {
+				var NumberValue = $(this).val();
+				var errorMsg = $(this).data("error");
+				var wrongMsg = $(this).data("wrong");
+				if ((NumberValue == '')) {
+					$(this).parent().find(".error").empty();
+					$(this).parent().append("<span class='error'>" + errorMsg + "</span>");
+					$(this).parent().addClass("has-error");
+					event.preventDefault();
+				} else if (!(NumberValue == '')) {
+					var q = 0;
+					$(this).each(function(q) {
+						var regex2 = /^[0-9-+]+$/;
+						if (!regex2.test(NumberValue)) {
+							$(this).parent().find(".error").empty();
+							$(this).parent().append("<span class='error'>" + wrongMsg + "</span>");
+							$(this).parent().addClass("has-error");
+							event.preventDefault();
+							return false;
+						} else {
+							$(this).parent().find(".error").empty();
+							$(this).parent().removeClass("has-error");
+							return true;
+						}
+					});
+				}
+			});
+		}
 	});
 }
