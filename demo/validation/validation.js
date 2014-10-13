@@ -1,5 +1,5 @@
 /*!
- * Expanable Search
+ * Form Validation
  * Original author: @Marmik Desai
  * Further changes, comments: @Marmik Desai
  * Licensed under the MIT license
@@ -14,7 +14,7 @@ $(function(){
 });
 	var radioDiv = ".form-gp";
 function validation(){
-	$("input[type='submit']").on("click", function(){
+	$("input[type='submit']").on("click", function(event){
 		
 		var typeText = $(this).parents("form").find("input[type='text']");
 		var typeTextarea = $(this).parents("form").find("textarea");
