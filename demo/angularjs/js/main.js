@@ -18,7 +18,7 @@ function MyController($scope) {
 			wood:'-'
 		},
 		{
-			name:'Renée Zellweger',
+			name:'Renee Zellweger',
 			image:'images/image1.jpg',
 			movie:'Bridget Jones"s Diary',
 			wood:'Hollywood'
@@ -48,7 +48,7 @@ function MyController($scope) {
 			wood:'Hollywood'
 		},
 		{
-			name:'Chloë Grace Moretz',
+			name:'Chloe Grace Moretz',
 			image:'images/image6.jpg',
 			movie:'Kick-Ass',
 			wood:'Hollywood'
