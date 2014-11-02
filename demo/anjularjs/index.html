@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Live Single Search - Angular Js | Marmik Desai | Front End Developer</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script src="js/angular.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+</head>
+<body>
+<div ng-app="liveSearch" class="search-box">
+	<div class="liveSearch" ng-controller="MyController">
+		<input type="text" ng-model="filterBySearch" placeholder="I' AM LOOKING FOR..." />
+		<ul class="live-result">
+			<li ng-repeat="name in names | filter:filterBySearch | limitTo:100">
+				<div class="col">
+					<img src="{{ name.image }}" alt="" />
+				</div>
+				<div class="col">
+					{{ name.name }}
+				</div>
+				<div class="col">
+					{{ name.movie }}
+				</div>
+				<div class="col">
+					{{ name.wood }}
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

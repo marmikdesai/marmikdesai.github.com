@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+body, html, p, h1, h2, h3, section, article, div, figure, header, nav, address, footer {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, sans-serif;
+}
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {   
+	border : 0px;
+} 
+a, a:hover, a:focus {
+	text-decoration: none;
+	outline:none;
+}
+image {
+	border: none;
+}
+img {
+	vertical-align: middle;
+}
+ul, li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+input, textarea, button {
+	outline: none;
+	border-radius:0px;
+}
+.liveSearch {
+	width: 100%;
+	display: inline-block;
+	padding:100px;
+	font-family: arial,sans-serif;
+	font-size:13px;
+	line-height: 20px;
+	color:#000;
+}
+.liveSearch input{
+	background:#fff;
+	width: 100%;
+	margin-bottom:20px;
+	border:1px solid #000;
+	border-color:#a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+	line-height:20px;
+	padding:10px;
+}
+.liveSearch ul, .liveSearch ul li{
+	width:100%;
+}
+.liveSearch ul li{
+	border:1px solid #eaeaea;
+	border-bottom: 0px;
+	display:inline-block;
+	padding: 5px 10px;
+	vertical-align: middle;
+}
+.liveSearch ul li:first-child{
+	border-bottom:0px solid #eaeaea;
+}
+.liveSearch ul li:last-child{
+	border-top:1px solid #eaeaea;
+	border-bottom:1px solid #eaeaea;
+}
+.col{
+	width:24.70%;
+	display:inline-block;
+}
+.col img{
+	border:1px solid #B8BEBE;
+	height: 74px;
+}
