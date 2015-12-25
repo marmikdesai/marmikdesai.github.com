@@ -58,8 +58,6 @@ h1{
 	color:#000;
 }
 .form-gp{
-	width: 100%;
-	float: left;
 	font-size:14px;
 	color:#000;
 	line-height:20px;
@@ -68,7 +66,6 @@ h1{
 }
 .form-gp label{
 	width:100%;
-	float:left;
 }
 .form-gp input, .form-gp textarea, .form-gp select{
 	width:100%;
@@ -82,13 +79,15 @@ h1{
 .form-gp textarea{
 	height:100px;
 	resize:none;
-	float: left;
 }
 .form-gp input:focus, .form-gp input:active, .form-gp textarea:focus, .form-gp textarea:active, .form-gp select:focus, .form-gp select:active{
 	border-color:#4d90fe;
 	outline: 0;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.form-submit{
+	margin:20px 0;
 }
 .form-submit input{
 	width:120px;
@@ -98,16 +97,7 @@ h1{
 	line-height:37px;
 	padding:0px;
 }
-.form-check input, .form-radio{
-	width:auto;
-	padding:0px;
-}
-.form-radio, .form-radio label, .form-check label{
-	width:auto;
-	float:left;
-	margin-right: 20px;
-}
-.form-gp span {
+.has-error span {
 	line-height: 14px;
 	width: 100%;
 	float: left;
@@ -117,35 +107,59 @@ h1{
 	left: 0px;
 	bottom: -15px;
 }
-.form-gp span.error {
+.has-error input, .has-error textarea{
+	border-color:#EB0000;
+}
+.has-error span.error{
 	color: #EB0000;
 }
-.icheckbox_minimal, .iradio_minimal {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0;
-	padding: 0;
-	width: 18px;
-	height: 18px;
-	background: url(icon.png) no-repeat;
-	border: none;
-	cursor: pointer;
+.checkbox-holder, .radio-holder{
+	position:relative;
 }
-.icheckbox_minimal {
-	background-position: 0px 0px;
+.checkbox, .radio{
+	margin: 10px 0;
 }
-.icheckbox_minimal.focus, .icheckbox_minimal.hover {
-	background-position: -20px 0px;
+.checkbox input, .radio input{
+	display:none;
 }
-.icheckbox_minimal.checked {
-	background-position: -40px 0px;
+.checkbox input + label, .radio input + label{
+	width:100%;
+	position:relative;
+	font-size: 14px;
+	color: #000;
+	line-height: 30px;
+	padding: 0 0 0 30px;
+	cursor:pointer;
 }
-.iradio_minimal {
-	background-position: -100px 0px;
+.checkbox input + label:before, .checkbox input + label:after, .radio input + label:before, .radio input + label:after{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(icon.png) 0 0 no-repeat;
+	width: 20px;
+    height: 20px;
 }
-.iradio_minimal.focus, .iradio_minimal.hover {
-	background-position: -120px 0px;
+.checkbox input + label:after{
+	background-position:-40px 0;
+	opacity:0;
 }
-.iradio_minimal.checked {
-	background-position: -140px 0px;
+.checkbox input:checked + label:before{
+	opacity:0;
+}
+.checkbox input:checked + label:after{
+	opacity:1;
+}
+.radio input + label:before{
+	background-position:-100px 0;
+}
+.radio input + label:after{
+	background-position:-140px 0;
+	opacity:0;
+}
+.radio input:checked + label:before{
+	opacity:0;
+}
+.radio input:checked + label:after{
+	opacity:1;
 }

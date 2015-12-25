@@ -6,7 +6,6 @@
 <meta name="viewport" content="initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="jquery.min.js"></script>
-<script src="icheck.js"></script>
 <script src="validation.js"></script>
 </head>
 <body>
@@ -33,11 +32,11 @@
 				</div>
 				<div class="form-gp">
 					<label for="phone">Phone</label>
-					<input type="text" name="phone" placeholder="Phone" id="phone" data-error="Please Enter Phone" data-wrong="Please Enter Valid Phone" tabindex="5"/>
+					<input type="text" name="phone" placeholder="Phone" id="phone" class="phoneValid" data-error="Please Enter Phone" data-wrong="Please Enter Valid Phone" tabindex="5"/>
 				</div>
 				<div class="form-gp">
 					<label for="phone1">Mobile Phone</label>
-					<input type="text" name="phone1" placeholder="phone1" id="phone1" data-error="Please Enter Phone1" data-wrong="Please Enter Valid Phone1" tabindex="6"/>
+					<input type="text" name="phone1" placeholder="phone1" id="phone1" class="phoneValid" data-error="Please Enter Phone1" data-wrong="Please Enter Valid Phone1" tabindex="6"/>
 				</div>
 				<div class="form-gp">
 					<label for="message1">Message 1</label>
@@ -47,30 +46,39 @@
 					<label for="message2">Message 2</label>
 					<textarea name="message2" placeholder="Message" id="message2" data-error="Please Enter Message 2" tabindex="8"></textarea>
 				</div>
-				<div class="form-gp form-check">
-					<label for="option1">Option 1</label>
-					<input type="checkbox" name="option1" id="option1" data-error="Please Check Option 1" tabindex="9"/>
+				<div class="checkbox-holder" data-error="Please Check Option">
+					<div class="checkbox">
+						<input type="checkbox" name="option1" id="option1" tabindex="9"/>
+						<label for="option1">checkbox 1</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="option2" id="option2" tabindex="10"/>
+						<label for="option2">checkbox 2</label>
+					</div>
 				</div>
-				<div class="form-gp form-check">
-					<label for="option2">Option 2</label>
-					<input type="checkbox" name="option2" id="option2" data-error="Please Check Option 2" tabindex="10"/>
-				</div>
-				<div class="form-gp" data-error="Please Check Gender">
-					<div class="form-radio">
-						<label for="male">Male</label>
+				<div class="radio-holder" data-error="Please Check Gender">
+					<div class="radio">
 						<input type="radio" name="radio" id="male" tabindex="11"/>
+						<label for="male">Male</label>
 					</div>
-					<div class="form-radio">
-						<label for="female">Female</label>
+					<div class="radio">
 						<input type="radio" name="radio" id="female" tabindex="12"/>
+						<label for="female">Female</label>
 					</div>
+				</div>
+				<div class="form-gp">
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="Password" id="password" data-error="Please Enter Password" tabindex="13">
+				</div>
+				<div class="form-gp">
+					<label for="cPassword">Conform Password</label>
+					<input type="password" name="cPassword" placeholder="Conform Password" id="cPassword" data-error="Please Enter Conform Password" tabindex="14">
 				</div>
 				<div class="form-gp form-submit">
-					<input type="submit" name="Submit" value="Submit" tabindex="13"/>
+					<input type="submit" name="Submit" value="Submit" tabindex="15"/>
 				</div>
 			</form>
 		</div>
-		<h1> Second Form Marmik Desai </h1>
 		<div class="container form2">
 			<form action="#" method="get">
 				<div class="form-gp">
@@ -91,11 +99,11 @@
 				</div>
 				<div class="form-gp">
 					<label for="phone">Phone</label>
-					<input type="text" name="phone" placeholder="Phone" id="phone" data-error="Please Enter Phone" data-wrong="Please Enter Valid Phone" tabindex="5"/>
+					<input type="text" name="phone" placeholder="Phone" id="phone" class="phoneValid" data-error="Please Enter Phone" data-wrong="Please Enter Valid Phone" tabindex="5"/>
 				</div>
 				<div class="form-gp">
 					<label for="phone1">Mobile Phone</label>
-					<input type="text" name="phone1" placeholder="phone1" id="phone1" data-error="Please Enter Phone1" data-wrong="Please Enter Valid Phone1" tabindex="6"/>
+					<input type="text" name="phone1" placeholder="phone1" id="phone1" class="phoneValid" data-error="Please Enter Phone1" data-wrong="Please Enter Valid Phone1" tabindex="6"/>
 				</div>
 				<div class="form-gp">
 					<label for="message1">Message 1</label>
@@ -105,26 +113,36 @@
 					<label for="message2">Message 2</label>
 					<textarea name="message2" placeholder="Message" id="message2" data-error="Please Enter Message 2" tabindex="8"></textarea>
 				</div>
-				<div class="form-gp form-check">
-					<label for="option1">Option 1</label>
-					<input type="checkbox" name="option1" id="option1" data-error="Please Check Option 1" tabindex="9"/>
+				<div class="checkbox-holder" data-error="Please Check Option">
+					<div class="checkbox">
+						<input type="checkbox" name="option1" id="option1" tabindex="9"/>
+						<label for="option1">checkbox 1</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="option2" id="option2" tabindex="10"/>
+						<label for="option2">checkbox 2</label>
+					</div>
 				</div>
-				<div class="form-gp form-check">
-					<label for="option2">Option 2</label>
-					<input type="checkbox" name="option2" id="option2" data-error="Please Check Option 2" tabindex="10"/>
-				</div>
-				<div class="form-gp" data-error="Please Check Gender">
-					<div class="form-radio">
-						<label for="male">Male</label>
+				<div class="radio-holder" data-error="Please Check Gender">
+					<div class="radio">
 						<input type="radio" name="radio" id="male" tabindex="11"/>
+						<label for="male">Male</label>
 					</div>
-					<div class="form-radio">
-						<label for="female">Female</label>
+					<div class="radio">
 						<input type="radio" name="radio" id="female" tabindex="12"/>
+						<label for="female">Female</label>
 					</div>
+				</div>
+				<div class="form-gp">
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="Password" id="password" data-error="Please Enter Password" tabindex="13">
+				</div>
+				<div class="form-gp">
+					<label for="cPassword">Conform Password</label>
+					<input type="password" name="cPassword" placeholder="Conform Password" id="cPassword" data-error="Please Enter Conform Password" tabindex="14">
 				</div>
 				<div class="form-gp form-submit">
-					<input type="submit" name="Submit" value="Submit" tabindex="13"/>
+					<input type="submit" name="Submit" value="Submit" tabindex="15"/>
 				</div>
 			</form>
 		</div>
