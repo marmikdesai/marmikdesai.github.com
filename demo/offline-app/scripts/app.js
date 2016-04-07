@@ -51,13 +51,13 @@
 
   document.getElementById('butRefresh').addEventListener('click', function() {
     // Refresh all of the forecasts
-	alert(34)
+//	alert(34)
     app.updateForecasts();
   });
 
   document.getElementById('butAdd').addEventListener('click', function() {
     // Open/show the add new city dialog
-	alert(35)
+//	alert(35)
     app.toggleAddDialog(true);
   });
 
@@ -163,7 +163,7 @@
             // Only update if the XHR is still pending, otherwise the XHR
             // has already returned and provided the latest data.
             if (app.hasRequestPending) {
-              console.log('[App] Forecast Updated From Cache');
+//              console.log('[App] Forecast Updated From Cache');
               json.key = key;
               json.label = label;
               app.updateForecastCard(json);
@@ -182,7 +182,7 @@
           response.key = key;
           response.label = label;
           app.hasRequestPending = false;
-          console.log('[App] Forecast Updated From Network');
+//          console.log('[App] Forecast Updated From Network');
           app.updateForecastCard(response);
         }
       }
@@ -204,7 +204,7 @@
     var selectedCities = JSON.stringify(app.selectedCities);
     // IMPORTANT: See notes about use of localStorage.
     localStorage.selectedCities = selectedCities;
-	alert(localStorage);
+//	alert(localStorage);
   };
 
   /*****************************************************************************

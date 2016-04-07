@@ -21,21 +21,23 @@ var filesToCache = [
 ];
 
 self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
+console.log("marmik install")
+//  console.log('[ServiceWorker] Install');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching App Shell');
+//      console.log('[ServiceWorker] Caching App Shell');
       return cache.addAll(filesToCache);
     })
   );
 });
 
 self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
+console.log("marmik active")
+//  console.log('[ServiceWorker] Activate');
   e.waitUntil(
     caches.keys().then(function(keyList) {
       return Promise.all(keyList.map(function(key) {
-        console.log('[ServiceWorker] Removing old cache', key);
+//        console.log('[ServiceWorker] Removing old cache', key);
         if (key !== cacheName) {
           return caches.delete(key);
         }
@@ -45,7 +47,8 @@ self.addEventListener('activate', function(e) {
 });
 
 self.addEventListener('fetch', function(e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
+console.log("marmik fetch")
+//  console.log('[ServiceWorker] Fetch', e.request.url);
   var dataUrl = 'https://publicdata-weather.firebaseio.com/';
   if (e.request.url.indexOf(dataUrl) === 0) {
     e.respondWith(
@@ -53,7 +56,7 @@ self.addEventListener('fetch', function(e) {
         .then(function(response) {
           return caches.open(dataCacheName).then(function(cache) {
             cache.put(e.request.url, response.clone());
-            console.log('[ServiceWorker] Fetched&Cached Data');
+//            console.log('[ServiceWorker] Fetched&Cached Data');
             return response;
           });
         })
