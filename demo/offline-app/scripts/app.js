@@ -236,7 +236,7 @@
   // Add feature check for Service Workers here
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../service-worker.js').then(function(reg) {
+    navigator.serviceWorker.register('/demo/service-worker.js').then(function(reg) {
 
         if (reg.installing) {
             console.log('Service worker installing');
