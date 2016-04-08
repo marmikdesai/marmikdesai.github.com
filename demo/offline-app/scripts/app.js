@@ -243,7 +243,7 @@
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('../offline-app/service-worker.js')
             .then(function() {
-            console.log('Service Worker Registered marmik');
+            console.log('Service Worker Registered marmik ');
         });
     }
 })();

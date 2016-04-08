@@ -32,7 +32,7 @@ console.log("marmik active")
 });
 
 self.addEventListener('fetch', function(e) {
-console.log("marmik fetch")
+console.log("marmik fetch v1")
 //  console.log('[ServiceWorker] Fetch', e.request.url);
   var dataUrl = 'https://publicdata-weather.firebaseio.com/';
   if (e.request.url.indexOf(dataUrl) === 0) {
