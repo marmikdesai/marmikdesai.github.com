@@ -243,6 +243,7 @@
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('../offline-app/service-worker.js')
             .then(function() {
+			alert(35)
             console.log('Service Worker Registered');
         });
     }
